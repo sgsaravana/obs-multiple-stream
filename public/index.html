@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="./semantic.css"> -->
+    <title>RTMP Router</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="main.bundle.js"></script>
+    <!-- <script src="semantic.js"></script> -->
+    <script>
+      // prevent default behavior from changing page on dropped file from outside
+      window.ondragenter = function(e) { e.preventDefault(); e.stopPropagation(); return false; };
+      window.ondragover  = function(e) { e.preventDefault(); e.stopPropagation(); return false; };
+      window.ondrop      = function(e) { e.preventDefault(); e.stopPropagation(); return false; };
+    </script>
+  </body>
+</html>
