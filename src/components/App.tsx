@@ -13,6 +13,12 @@ export default class App extends React.Component<AppProps, any> {
 		return (
 			<div>
 				<h1>RTMP Router !</h1>
+				<div>
+					<span></span>
+					<video width="640" height="360" id="my-video" autoPlay data-setup='{"techOrder": ["flash"]}'>
+						<source src="rtmp://localhost/live/myStream" type='rtmp/mp4' />
+					</video>
+				</div>
 			</div>
 		);
 	}

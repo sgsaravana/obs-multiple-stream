@@ -3,25 +3,33 @@ const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.tsx',
-  output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist')
-  },
-  devtool: 'source-map',
-  resolve: {
-    extensions : ['.js', '.json', '.ts', '.tsx'],
+	entry    : './src/index.tsx',
+	output   : {
+		filename : '[name].bundle.js',
+		path     : path.resolve(__dirname, 'dist')
+	},
+	devtool : 'source-map',
+	resolve : {
+	extensions : ['.js', '.json', '.ts', '.tsx'],
+	modules    : ["node_modules"]
     // alias      : {
     //   jquery : "jquery/src/jquery"
     // }
   },
+  target: 'node',
   module: {
     rules: [
-      {
-        test    : /\.(ts|tsx)$/,
-        loader  : 'awesome-typescript-loader',
-        exclude : /node_modules/
-      }
+		{
+			test    : /\.(ts|tsx)$/,
+			loader  : 'awesome-typescript-loader',
+			exclude : /node_modules/
+		}
+		// {
+		// 	test    : /\.(js)$/,
+		// 	loader  : 'script-loader!file-loader',
+		// 	include : /node-media-server/,
+		// 	exclude : /(node_modules)/
+		// }
       // {
       //   test: /\.(png|woff|woff2|eot|ttf|svg)$/,
       //   loader: 'url-loader?limit=100000'

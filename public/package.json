@@ -1,23 +1,23 @@
 {
-  "name"          : "rtmp.router",
-  "description"   : "RTMP Router",
-  "version"       : "0.1.0",
-  "main"          : "index.html",
-  "chromium-args" : "--enable-features=WebRTC-H264WithOpenH264FFmpeg --disable-web-security --ignore-certificate-errors --enable-threaded-compositing",
-  "private"       : true,
-  "window"        : {
-    "title"                    : "",
-    "toolbar"                  : false,
-    "fullscreen"               : false,
-    "frame"                    : true,
-    "show"                     : true,
-    "width"                    : 800,
-    "min_width"                : 800,
-    "height"                   : 600,
-    "min_height"               : 600,
-    "focus"                    : false,
-    "icon"                     : "icon_128x128.png",
-    "force-enable-drag-region" : true
+  "name": "rtmp.router",
+  "description": "RTMP Router",
+  "version": "0.1.0",
+  "main": "index.html",
+  "chromium-args": " --enable-features=WebRTC-H264WithOpenH264FFmpeg --disable-web-security --ignore-certificate-errors --enable-threaded-compositing",
+  "private": true,
+  "window": {
+    "title": "",
+    "toolbar": true,
+    "fullscreen": false,
+    "frame": true,
+    "show": true,
+    "width": 800,
+    "min_width": 800,
+    "height": 600,
+    "min_height": 600,
+    "focus": false,
+    "icon": "icon_128x128.png",
+    "force-enable-drag-region": true
   },
   "permissions": [
     "chrome-extention://*",
@@ -27,10 +27,11 @@
     "plugin": true
   },
   "dependencies": {
+    "connect": "^3.6.6",
+    "node-media-server": "^1.2.7",
     "nw-flash-trust": "^0.3.0",
     "video.js": "^6.7.3",
     "videojs-flash": "^2.1.0",
-    "videojs-swf": "^5.4.1",
-    "win-audio": "^1.1.8"
+    "videojs-swf": "^5.4.1"
   }
 }
